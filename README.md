@@ -1,5 +1,4 @@
 # On19-S17-S18-Projeto-Livre
-Projeto Livre
 
 ## Voltei mis amoressssss
 Ela mesma, Agnes Melo;
@@ -17,9 +16,7 @@ Parece bastante coisa, mas a gente vai juntas e vai dar tudo certo! (ou assim es
 ## Documentação no swagger
 Esse tuto eu roubei da May (a maior que temos), viu gurias? Bora que bora documentar esse babadoh:
 * Abro meu projeto
-<br>
 * Abro o terminal na raiz do projeto
-<br>
 * Executo os seguintes comandos:
 ```
      $ npm i swagger-autogen swagger-ui-express (isso fará a instalacao do swagger autogen no nosso projeto)
@@ -44,13 +41,9 @@ Esse tuto eu roubei da May (a maior que temos), viu gurias? Bora que bora docume
 ```
 npm run swagger-autogen
 ```
-<br>
 Note que foi criado um arquivo chamado swagger_output.json dentro da nossa pasta swagger.
-<br>
 Parabéns, vc ja tem sua documentação!!!!
-<br>
 Bora deixar nossa documentaçao mais visual?
-<br>
 * Vamos lá no nosso app.js e adicionaremos o seguinte código:
 ```
     const swaggerUi = require('swagger-ui-express');
@@ -59,7 +52,6 @@ Bora deixar nossa documentaçao mais visual?
 
     app.use('/minha-rota-de-documentacao', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 ```
-<br>
 * Em seguida, inicializaremos nosso projeto, é so digitar no terminal:
 ```
 $ npm start
@@ -71,3 +63,21 @@ localhost:3000/minha-rota-de-documentacao
 
 PS: Estou usando a porta 3000, caso vc esteja usando alguma diferente, use ela, beleza?
 
+## Deploy no render
+
+* Na [página principal do Render](https://render.com/), clique no botão "Get started for free";
+* Em seguida, clique no botão "GitHub" dentro das opções de registro e será redirecionada para o login do mesmo; preencha com suas credenciais do GitHub e ele te enviará um código por email (segurança é tudo né garoutas?), preencha o código corretamente;
+* Na página seguinte, clique no botão "Authorize render";
+* Logo depois, clique em "Complete sign up"; O render te mandará um email de confirmação de registro, abra o email na sua caixa de mensagens e clique no link para ativar sua conta;
+* Com a conta ativada, já podemos começar o deploy! Na dashboard do render, clique em "New web service";
+* Depois, no lado direito superior da tela, clique no link "Connect account" logo abaixo de "GitHub";
+* O site mostrará as contas do github disponíveis para serem conectadas; selecione a conta onde sua API está e, logo depois, selecione "All repositories" e clique em "Install";
+* Em seguida, selecione o seu projeto na lista de repositórios e clique em "Connect";
+* Preencha o formulário com o nome do seu repositório; Em "Build Command", escreva "npm install"; Em "Start Command", escreva "npm start";
+* No final da página, clique em "Create web service";
+A partir daí, o render já vai querer deployar nossa API (mt apressado o bicho), mas o deploy vai falhar; pra que ele funcione, precisamos adicionar nossas variáveis de ambiente:
+* Na parte superior, clique em "Env Groups";
+* Nessa página, clique em "Add environment variable" para adicionar todas as variáveis de ambiente necessárias (aquelas que estão no seu arquivo .env do projeto), MENOS a variável referente à porta; o render define essa variável automaticamente;
+* Depois de adicionar tudo certinho, clique em Dashboard no canto superior esquerdo e selecione seu projeto na lista "Overview";
+* Clique em "Manual deploy" e depois em "Clear build cache & deploy";
+* Se der tudo certo, você só precisa esperar alguns minutinhos e pronto, seu projeto já está deployado!
