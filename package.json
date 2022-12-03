@@ -8,5 +8,26 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.7.5",
     "nodemon": "^2.0.20"
-  }
+  },
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "name": "on19-tet-s17-s18-projeto-livre",
+  "description": "Ela mesma, Agnes Melo;\r Porém, pro projeto final, né? quem tá ansiosa respirah;<br><br>\r ![bjork gritah](https://64.media.tumblr.com/e4ac84e95284f4abc15bfdd63bb89a1c/tumblr_ml4r2etFcA1rok2afo1_500.gifv)\r <br><br>\r Vamos fazer desse processinho o mais indolor e tranquilo possível? Então se liga nas 4 coisas que são importantes da gente prestar atenção nessas duas semanas:\r * Vamos checar como estão as ideias e os códigos dos projetos para entender de onde partir. Esse é também um momento de acolhimento e troca entre nós;\r * Na apresentação para a banca, precisamos mostrar nossas rotas no postman para as juradas virarem a cadeira;\r * Também é preciso gerar a documentação da nossa API através do swagger;\r * E por último, precisamos deployar nossa API no render pra que ela esteja acessível, cronicamente online, igual a senhora que passa sete horas no twitter por dia;",
+  "version": "1.0.0",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reprograma/on19-tet-s17-s18-projeto-livre.git"
+  },
+  "author": "reprograma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reprograma/on19-tet-s17-s18-projeto-livre/issues"
+  },
+  "homepage": "https://github.com/reprograma/on19-tet-s17-s18-projeto-livre#readme"
 }
