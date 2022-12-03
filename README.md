@@ -5,7 +5,7 @@ Ela mesma, Agnes Melo;
 Porém, pro projeto final, né? quem tá ansiosa respirah;<br><br>
 ![bjork gritah](https://64.media.tumblr.com/e4ac84e95284f4abc15bfdd63bb89a1c/tumblr_ml4r2etFcA1rok2afo1_500.gifv)
 <br><br>
-Vamos fazer desse processinho o mais indolor e tranquilo possível? Então se liga nas 3 coisas que são importantes da gente prestar atenção nessas duas semanas:
+Vamos fazer desse processinho o mais indolor e tranquilo possível? Então se liga nas 4 coisas que são importantes da gente prestar atenção nessas duas semanas:
 * Vamos checar como estão as ideias e os códigos dos projetos para entender de onde partir. Esse é também um momento de acolhimento e troca entre nós;
 * Na apresentação para a banca, precisamos mostrar nossas rotas no postman para as juradas virarem a cadeira;
 * Também é preciso gerar a documentação da nossa API através do swagger;
@@ -75,9 +75,8 @@ PS: Estou usando a porta 3000, caso vc esteja usando alguma diferente, use ela, 
 * Em seguida, selecione o seu projeto na lista de repositórios e clique em "Connect";
 * Preencha o formulário com o nome do seu repositório; Em "Build Command", escreva "npm install"; Em "Start Command", escreva "npm start";
 * No final da página, clique em "Create web service";
-A partir daí, o render já vai querer deployar nossa API (mt apressado o bicho), mas o deploy vai falhar; pra que ele funcione, precisamos adicionar nossas variáveis de ambiente:
-* Na parte superior, clique em "Env Groups";
+<br>A partir daí, o render já vai querer deployar nossa API (mt apressado o bicho), mas o deploy vai falhar; pra que ele funcione, precisamos adicionar nossas variáveis de ambiente:
+* No menu esquerdo, clique em "Environment";
 * Nessa página, clique em "Add environment variable" para adicionar todas as variáveis de ambiente necessárias (aquelas que estão no seu arquivo .env do projeto), MENOS a variável referente à porta; o render define essa variável automaticamente;
-* Depois de adicionar tudo certinho, clique em Dashboard no canto superior esquerdo e selecione seu projeto na lista "Overview";
-* Clique em "Manual deploy" e depois em "Clear build cache & deploy";
+* Depois de adicionar tudo certinho e clicar em "Save changes", o render já tentará deployar seu projeto novamente de forma automática;
 * Se der tudo certo, você só precisa esperar alguns minutinhos e pronto, seu projeto já está deployado!
